@@ -5,15 +5,7 @@ import "../src/css/animate.css";
 import "../src/css/style.css";
 import "../src/css/responsive.css";
 
-import "../src/js/jquery-3.6.0.min.js";
 import "../src/js/bootstrap.bundle.min.js";
-import "../src/js/isotope.pkgd.min.js";
-import "../src/js/jquery.nice-select.min.js";
-import "../src/js/simplyCountdown.js";
-import "../src/js/jquery.countup.min.js";
-import "../src/js/venobox.min.js";
-import "../src/js/sticky_sidebar.js";
-import "../src/js/main.js";
 
 import WOW from "wow.js";
 
