@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 $(function () {
   "use strict";
 
@@ -33,67 +35,18 @@ $(function () {
     $(".fp__search_form").removeClass("show");
   });
 
-  //=========NICE SELECT=========
-  $("#select_js").niceSelect();
-  $("#select_js2").niceSelect();
-  $("#select_js3").niceSelect();
-  $("#select_js4").niceSelect();
-
   //=======BANNER SLIDER======
-  $(".banner_slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    cssEase: "linear",
-    dots: true,
-    arrows: false,
-  });
+  // $(".banner_slider").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   cssEase: "linear",
+  //   dots: true,
+  //   arrows: false,
+  // });
 
   //=======OFFER ITEM SLIDER======
-  $(".offer_item_slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
-    // nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
-    // prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
-
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
 
   //*==========ISOTOPE==============
   var $grid = $(".grid").isotope({});
@@ -112,195 +65,182 @@ $(function () {
     event.preventDefault();
   });
 
-  //*=======simplyCountdown========
-  var d = new Date(),
-    countUpDate = new Date();
-  d.setDate(d.getDate() + 365);
-
-  // default example
-  simplyCountdown(".simply-countdown-one", {
-    year: d.getFullYear(),
-    month: d.getMonth() + 1,
-    day: d.getDate(),
-    enableUtc: true,
-  });
-
   //=======TEAM SLIDER======
-  $(".team_slider").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
+  // $(".team_slider").slick({
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   dots: true,
+  //   arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //=======ADD SLIDER======
-  $(".add_slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: false,
-    arrows: true,
-    nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
-    prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
+  // $(".add_slider").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   dots: false,
+  //   arrows: true,
+  //   nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
+  //   prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //=========COUNTER JS=========
   $(".counter").countUp();
 
   //=======OFFER ITEM SLIDER======
-  $(".testi_slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
+  // $(".testi_slider").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 4000,
+  //   dots: true,
+  //   arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //=======BRAND SLIDER======
-  $(".brand_slider").slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: false,
-    arrows: false,
+  // $(".brand_slider").slick({
+  //   slidesToShow: 6,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   dots: false,
+  //   arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 5,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //*=======SCROLL BUTTON=======
   $(".fp__scroll_btn").on("click", function () {
@@ -331,92 +271,92 @@ $(function () {
   });
 
   //=======OFFER ITEM SLIDER======
-  $(".blog_det_slider").slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
+  // $(".blog_det_slider").slick({
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   dots: true,
+  //   arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //=======OFFER ITEM SLIDER======
-  $(".related_product_slider").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: false,
-    arrows: true,
-    nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
-    prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
+  // $(".related_product_slider").slick({
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   dots: false,
+  //   arrows: true,
+  //   nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
+  //   prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //*==========wow js==========
   // new WOW().init();
@@ -461,61 +401,61 @@ $(function () {
   });
 
   //=======OFFER ITEM SLIDER======
-  $(".banner2_slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    dots: false,
-    arrows: true,
-    nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
-    prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
-  });
+  // $(".banner2_slider").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+  //   dots: false,
+  //   arrows: true,
+  //   nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
+  //   prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
+  // });
 
   //=======TESTIMONIAL 2 SLIDER======
-  $(".testi_slider2").slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: false,
-    arrows: true,
-    nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
-    prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
+  // $(".testi_slider2").slick({
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   dots: false,
+  //   arrows: true,
+  //   nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
+  //   prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+  //   responsive: [
+  //     {
+  //       breakpoint: 1400,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   //=======PRODUCT DETAILS SLIDER======
   if ($("#exzoom").length > 0) {
