@@ -1039,7 +1039,7 @@
   /* ======HOME PAGE START====== */
   /* topbar start */
   .fp__topbar {
-    position: static;
+    position: fixed;
   }
 
   .fp__topbar_info {
@@ -1418,6 +1418,10 @@
   /* ======ABOUT PAGE START====== */
   .fp__breadcrumb_text h1 {
     font-size: 30px;
+  }
+
+  .fp__breadcrumb_text p {
+    font-size: 15px;
   }
 
   .fp__breadcrumb_overlay {
@@ -1909,7 +1913,7 @@
   /* ======HOME PAGE START====== */
   /* topbar start */
   .fp__topbar {
-    position: static;
+    position: fixed;
   }
 
   .fp__topbar_info {
@@ -1917,7 +1921,7 @@
   }
 
   .fp__topbar_info li {
-    margin: 0px 5px !important;
+    margin: 0px 10px !important;
   }
 
   .fp__topbar_info li a {
@@ -2172,13 +2176,13 @@
   }
 
   .menu_filter button {
-    padding: 2px 15px;
+    padding: 4px 15px;
     font-weight: 500;
     font-size: 13px;
   }
 
   .fp__menu_item .fp__menu_item_text .title {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   /* menu end */
@@ -2357,6 +2361,15 @@
   /* ======ABOUT PAGE START====== */
   .fp__breadcrumb_text h1 {
     font-size: 18px;
+    line-height: 30px;
+  }
+
+  .fp__breadcrumb_text.baner h1 {
+    font-size: 32px !important;
+  }
+
+  .fp__breadcrumb_text p {
+    font-size: 14px;
   }
 
   .fp__breadcrumb_overlay {
@@ -2954,6 +2967,6 @@
   }
 
   .fp__menu_item .fp__menu_item_img {
-    height: 320px;
+    height: 220px;
   }
 }

@@ -16,7 +16,7 @@ const NavbarTop = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i className="fas fa-phone-alt"></i> +62896123456
+                  <i className="fab fa-whatsapp"></i>+62896123456
                 </a>
               </li>
             </ul>

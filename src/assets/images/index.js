@@ -6,5 +6,16 @@ import sosissedap1kg from "./sosissedap1kg.jpg";
 import sosisChamp1kg from "./sosisChamp1kg.webp";
 import kentangFiesta1kg from "./kentangFiesta1kg.jpg";
 import kentangAviko1kg from "./kentangAviko1kg.jpg";
+import backgroundImage from "./counter_bg.jpg";
 
-export { champ500, champ250, champ1kg, sosisgeboy1kg, sosissedap1kg, sosisChamp1kg, kentangFiesta1kg, kentangAviko1kg };
+export {
+  champ500,
+  champ250,
+  champ1kg,
+  sosisgeboy1kg,
+  sosissedap1kg,
+  sosisChamp1kg,
+  kentangFiesta1kg,
+  kentangAviko1kg,
+  backgroundImage,
+};

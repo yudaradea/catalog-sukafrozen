@@ -1,20 +1,44 @@
-import { categoryProduct } from "../constants";
+import { useState, useEffect } from "react";
+// import { AnimatePresence, motion } from "framer-motion";
+// import { categoryProduct } from "../constants";
 import { daftarProduct } from "../constants";
 import ModalProduk from "./ModalProduk";
 
 const ListProduct = () => {
+  const title = [
+    { id: 0, category: "all" },
+    { id: 1, category: "nugget" },
+    { id: 2, category: "sosis" },
+    { id: 3, category: "kentang" },
+  ];
+  const [active, setActive] = useState(0);
+  const [products] = useState(daftarProduct);
+  const [listProduct, setListProduct] = useState([]);
+
+  const activeTab = (id, cat) => {
+    setActive(id);
+    const productData = products.filter((item) => item.kategori === cat);
+    if (id === 0) {
+      setListProduct(products);
+    } else {
+      setListProduct(productData);
+    }
+  };
+
+  useEffect(() => {
+    setActive(0);
+    setListProduct(daftarProduct);
+  }, []);
   return (
     <>
-      <section className="fp__menu mt_95 xs_mt_65 mb_95 xs_mb_65">
+      <section className="fp__menu mb_95 xs_mb_65">
         <div className="container">
           <div className="row wow fadeInUp" data-wow-duration="1s">
             <div className="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
-              <div className="fp__section_heading mb_45">
+              <div className="fp__section_heading mb_25">
                 <h4>List Product</h4>
                 <h2>Our Delicious Product</h2>
-                <span>
-                  <img src="images/heading_shapes.png" alt="shapes" className="img-fluid w-100" />
-                </span>
+
                 <p>
                   Objectively pontificate quality models before intuitive information. Dramatically recaptiualize
                   multifunctional materials.
@@ -25,13 +49,14 @@ const ListProduct = () => {
 
           <div className="row wow fadeInUp" data-wow-duration="1s">
             <div className="col-12">
-              <div className="menu_filter d-flex flex-wrap justify-content-center">
-                <button className=" active" data-filter="*">
-                  all product
-                </button>
-                {categoryProduct.map((category) => (
-                  <button key={category.id} data-filter={category.class}>
-                    {category.nama}
+              <div className="menu_filter d-flex flex-wrap justify-content-center ">
+                {title.map((item, index) => (
+                  <button
+                    key={index}
+                    className={`mt-3 ${active == index ? "active" : ""}`}
+                    onClick={() => activeTab(item.id, item.category)}
+                  >
+                    {item.category}
                   </button>
                 ))}
               </div>
@@ -39,12 +64,8 @@ const ListProduct = () => {
           </div>
 
           <div className="row grid">
-            {daftarProduct.map((product) => (
-              <div
-                key={product.id}
-                className={`col-xl-3 col-sm-6 col-lg-4 wow fadeInUp ${product.kategori}`}
-                data-wow-duration="1s"
-              >
+            {listProduct.map((product) => (
+              <div key={product.id} className="col-xl-3 col-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
                 <div className="fp__menu_item">
                   <div className="fp__menu_item_img">
                     <img src={product.imgURL} alt="menu" className="img-fluid w-100" />
