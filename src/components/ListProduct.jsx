@@ -63,9 +63,13 @@ const ListProduct = () => {
             </div>
           </div>
 
-          <div className="row grid">
+          <div className="row grid ">
             {listProduct.map((product) => (
-              <div key={product.id} className="col-xl-3 col-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+              <div
+                key={product.id}
+                className="col-xl-3 col-6 col-lg-4 wow fadeInUp d-flex align-items-stretch"
+                data-wow-duration="1s"
+              >
                 <div className="fp__menu_item">
                   <div className="fp__menu_item_img">
                     <img src={product.imgURL} alt="menu" className="img-fluid w-100" />
