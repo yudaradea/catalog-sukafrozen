@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { daftarProduct } from "../constants";
 import Swal from "sweetalert2";
+import { FormatRupiah } from "@arismun/format-rupiah";
 
 const ModalProduk = () => {
   const [quantity, setQuantity] = useState(1);
@@ -62,7 +63,10 @@ const ModalProduk = () => {
                             <i className="fal fa-plus"></i>
                           </button>
                         </div>
-                        <h3>{produk.hargaFix * quantity}</h3>
+
+                        <h3>
+                          <FormatRupiah value={produk.hargaFix * quantity} />
+                        </h3>
                       </div>
                     </div>
 
@@ -73,7 +77,7 @@ const ModalProduk = () => {
                             className="common_btn"
                             href={`https://wa.me/6289671087959/?text=Halo%20suka%20frozen%2C%20saya%20ingin%20memesan%20produk%20%0ANama%20Saya%20%3A...%20%0AAlamat%20saya%20%3A...%20%20%0AProduk%20%3A%20${
                               produk.nama
-                            }%0AQuantity%20%3A%20${quantity}%0ATotal%20harga%20%3A%20${produk.hargaFix * quantity}`}
+                            }%0AQuantity%20%3A%20${quantity}%0ATotal%20harga%20%3A%20Rp ${produk.hargaFix * quantity}`}
                             target="_blank"
                             rel="noreferrer"
                           >
